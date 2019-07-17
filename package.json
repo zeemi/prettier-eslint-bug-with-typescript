@@ -1,0 +1,22 @@
+{
+  "name": "prettier-eslint-bug-reproduction",
+  "author": "zeemi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "format": "prettier-eslint --write '**/*.[tj]s'",
+    "format-fail": "prettier-eslint  ./src/ok.ts ./src/notOk.ts",
+    "format-succ": "prettier-eslint  ./src/notOk.ts ",
+    "lint": "eslint .  --ext .js,.ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "eslint": "^6.0.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.5.2"
+  }
+}
